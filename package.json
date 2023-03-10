@@ -1,0 +1,9 @@
+{
+  "name": "sdk-create-project",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@stackblitz/sdk": "1.8.0",
+    "vue": "^3.2.47"
+  }
+}
