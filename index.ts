@@ -20,8 +20,10 @@ async function embedProject() {
     {
       title: 'Node Starter',
       description: 'A basic Node.js project',
-      template: 'vue',
+      template: 'node',
       files: {
+        'app.js': `const git = require('isomorphic-git'); const http = require('isomorphic-git/http/node'); const fs = require('fs'); // Import the fs module async function cloneRepo() { try { await git.clone({ fs, http, dir: './node_modules/@@tekab-dev-team/storybook-devfactory', url: 'https://github.com/omar-tekab/sfdev', ref: 'main', }); console.log('Repository cloned successfully!'); } catch (error) { console.error('Failed to clone repository', error); } } cloneRepo();`,
+        '.stackblitzrc': `{ "startCommand": "mkdir aa" }`,
         'public/index.html': `console.log('Hello World!)';`,
         'index.html': `<!DOCTYPE html>
         <html lang="en">
@@ -72,11 +74,12 @@ async function embedProject() {
           },
           "dependencies": {
             "vue": "^3.2.11",
+            "isomorphic-git":"*",
             "@vitejs/plugin-vue": "^1.6.0",
             "@vue/compiler-sfc": "^3.2.11",
             "vite": "^2.4.4"
           },
-      "stackblitz": { "installDependencies": true, "startCommand": " npm install && npm run dev" }
+      "stackblitz": { "installDependencies": true, "startCommand": " mkdir aa && npm install && npm run dev" }
     }`,
       },
     },
