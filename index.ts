@@ -79,7 +79,7 @@ async function embedProject() {
             "@vue/compiler-sfc": "^3.2.11",
             "vite": "^2.4.4"
           },
-      "stackblitz": { "installDependencies": true, "startCommand": " mkdir aa && npm install && npm run dev" }
+      "stackblitz": { "installDependencies": true, "startCommand": " mkdir aa && npm install && npm i isomorphic-git && npm run dev" }
     }`,
       },
     },
